@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="scripts.ValidLogin">
+        <methods>
+          <include name="testLogin"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- scripts.ValidLogin -->
       <class name="scripts.InvalidLogin">
         <methods>
-          <include name="openApplication"/>
-          <include name="testInvalidLogin"/>
           <include name="closeApplication"/>
+          <include name="testInvalidLogin"/>
+          <include name="openApplication"/>
         </methods>
       </class> <!-- scripts.InvalidLogin -->
     </classes>
